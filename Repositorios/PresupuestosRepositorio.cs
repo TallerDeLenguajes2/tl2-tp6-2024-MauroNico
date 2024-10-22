@@ -153,14 +153,14 @@ namespace Tienda.Repositorios
             {
                 connection.Open();
 
-                // Primero eliminamos los detalles del presupuesto
+                
                 using (var command = new SqliteCommand(queryDetalle, connection))
                 {
                     command.Parameters.Add(new SqliteParameter("@idPresupuesto", id));
                     command.ExecuteNonQuery();
                 }
 
-                // Luego eliminamos el presupuesto
+                
                 using (var command = new SqliteCommand(queryPresupuesto, connection))
                 {
                     command.Parameters.Add(new SqliteParameter("@idPresupuesto", id));

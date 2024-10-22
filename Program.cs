@@ -7,10 +7,12 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-var app = builder.Build();
-
 builder.Services.AddScoped<IProductosRepositorio, ProductosRepositorio>();
 builder.Services.AddScoped<IPresupuestosRepositorio, PresupuestosRepositorio>();
+
+var app = builder.Build();
+
+
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {

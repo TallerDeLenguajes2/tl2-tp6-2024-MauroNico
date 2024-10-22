@@ -2,7 +2,6 @@ using Microsoft.AspNetCore.Mvc;
 using Tienda.Models;
 using Tienda.Repositorios;
 
-namespace Tienda.Controllers
-{
-   
+namespace Tienda.Copntrollers{
+
 }
